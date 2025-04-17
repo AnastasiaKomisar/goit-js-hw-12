@@ -8,6 +8,7 @@ import {
   showSearchLoader,
   showLoadMoreLoader,
   hideLoadMoreButton,
+  hideLoadMoreLoader,
 } from "./js/render-functions";
 
 const form = document.querySelector(".form");
@@ -88,6 +89,7 @@ loadMoreButton.addEventListener("click", async () => {
 
     if (currentPage * per_page >= totalHits) {
         hideLoadMoreButton();
+        hideLoadMoreLoader();
         iziToast.info({
         title: "",
         message: "We're sorry, but you've reached the end of search results.",
