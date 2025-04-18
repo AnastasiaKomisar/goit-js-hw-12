@@ -43,7 +43,6 @@ export const createGallery = (images) => {
       lightbox.refresh();
       hideSearchLoader();
       hideLoadMoreLoader(); 
-      showLoadMoreButton();
     })
     .catch((error) => {
       console.error("Image loading failed:", error);
